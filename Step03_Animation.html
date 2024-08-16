@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            border: 1px solid blue;
+        }
+        .box:hover{
+            /* 적용할 애니메이션 key frames의 이름 */
+            animation-name: myAni;
+            /* 애니메이션 시간 */
+            animation-duration: 0.1s;
+            /* 애니메이션 가속도 */
+            animation-timing-function: ease-out;
+            /* 애니메이션 반복 */
+            animation-iteration-count: 3;
+            /* 애니메인션 진행반향
+               normal | revers | alternate
+            */
+            animation-direction: reverse;
+        }
+        /* 
+        애니메이션 keyframes 정의하기
+        @keyframes 작명{
+            진행률{
+                css
+            }
+            진행률{
+                css
+            }
+        } 
+        */
+        @keyframes myAni {
+            0%{
+                background: #0f0;
+                transform: rotate(0deg) scale(1.0);
+            }
+            50%{
+                background: #f00;
+                transform: rotate(-90deg) scale(0.5);
+            }
+            100%{
+                background: #00f;
+                transform: rotate(360deg) scale(1.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
