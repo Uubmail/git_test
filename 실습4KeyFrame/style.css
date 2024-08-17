@@ -8,6 +8,11 @@
 body{
 	background: aqua;
 }
+.back{
+	background-image: url(/prairie.png);
+	width: auto;
+	height: 300px;
+}
 .body{
 	background: #fff;
 	position: absolute;
@@ -74,6 +79,8 @@ body{
 	width: 15px;
 	height: 140px;
 	background: #000;
+	transform-origin: top;
+	animation: Rfoot 1s linear infinite alternate;
 }
 @keyframes right{
 	0%{
@@ -102,12 +109,12 @@ body{
 	}
 	
 }
-@keyframes left{
+@keyframes Rfoot{
 	0%{
 		transform: rotate(0deg) scale(1.0);
 	}
 	100%{
-		transform: rotate(45deg) scale(1.0);
+		transform: rotate(-45deg) scale(1.0);
 	}
 	
 }
