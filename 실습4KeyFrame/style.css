@@ -19,12 +19,12 @@ body{
 	background-image: url(../prairie.png);
 	margin: 0;
 	position: absolute;
-	width: 9999px;
+	width: 99999px;
 	height: 220px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	animation: prairie 5s linear infinite;
+	animation: prairie 900s linear infinite forwards;
 	
 }
 .body{
@@ -134,7 +134,7 @@ body{
 }
  
  @keyframes prairie{
-	0%{transform: translate(0);}
+	0%{transform: translate(-2000px);}
 	/* 50%{transform: translate();} */
-	100%{transform: translate(10%);}
+	100%{transform: translate(-99999px);}
  }
