@@ -13,6 +13,7 @@ body{
 	position: relative;
 	height: 100%;
 	margin: 0;
+	overflow: hidden;
 }
 .prairie{
 	display: inline-block;
@@ -20,7 +21,7 @@ body{
 	margin: 0;
 	position: absolute;
 	width: 99999px;
-	height: 220px;
+	height: 200px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -137,4 +138,164 @@ body{
 	0%{transform: translate(-2000px);}
 	/* 50%{transform: translate();} */
 	100%{transform: translate(-99999px);}
+ }
+ .bird{
+	position: relative;
+	top: 0;
+	left: 2000px;
+	width: 200px;
+	height: 100px;
+	animation: bird 20s linear infinite both;
+ }
+ @keyframes bird{
+	0%{
+		left: 2000px;
+	}
+	100%{
+		left: -300px;
+	}
+ }
+
+ .bird .bird_head{
+	background: #004060;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	border-radius: 50%;
+	z-index: 2;
+ }
+
+.bird .root{
+	width: 20px;
+	height: 20px;
+	background-color: #ffd700;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	position: absolute;
+	top: 35px;
+	left: 11px;
+	animation: root 1s linear infinite alternate ;
+}
+
+@keyframes root{
+	0%{
+		transform: rotate(22deg) scale(1.0);
+	}
+	100%{
+		
+		transform: rotate(26deg) scale(1.0);
+	}
+}
+.bird .bird_eyes{
+	background: #000;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 33px;
+	left: 30px;
+	border-radius: 50%;
+	z-index: 3;
+}
+
+.bird .bird_body{
+	background: red;
+	width: 100px;
+	height: 60px;
+	position: absolute;
+	top: 15px;
+	left: 55px;
+	border-radius: 50%;
+	z-index: 1;
+ }
+
+ .bird .Rwing{
+	position: absolute;
+	top: 45px;
+	left:80px;
+	width: 40px;
+	height: 50px;
+	display: flex;
+	z-index: 2;
+	transform-origin: top;
+	animation: Rwing 3s linear infinite alternate;
+ }
+
+ @keyframes Rwing{
+	0%{
+		transform:rotateX(0) scale(1.0)
+	}
+	100%{
+		transform: rotateX(150deg) scale(1.0);
+	}
+ }
+
+ .bird .Rwing .Rwing1{
+	background: #fff;
+	width: 10px;
+	height:55px;
+	border-radius: 100px 0 100px 10px;
+ }
+ .bird .Rwing .Rwing2{
+	background: #fff;
+	width: 10px;
+	height:45px;
+	border-radius: 0 0 50px 10px;
+ }
+ .bird .Rwing .Rwing3{
+	background: #fff;
+	width: 10px;
+	height: 38px;
+	border-radius: 0 0 40px 10px;
+ }
+ .bird .Rwing .Rwing4{
+	background: #fff;
+	width: 10px;
+	height: 30px;
+	border-radius: 0 150px 150px 0;
+ }
+
+ .bird .Lwing{
+	position: absolute;
+	top: 45px;
+	left: 90px;
+	width: 40px;
+	height: 50px;
+	display: flex;
+	transform-origin: top;
+	animation: Lwing 3s linear infinite alternate ;
+ }
+
+ @keyframes Lwing{
+	0%{
+		transform:rotateX(0) scale(1.0)
+	}
+	100%{
+		transform: rotateX(170deg) scale(1.0);
+	}
+ }
+
+ .bird .Lwing .Lwing1{
+	background: #fff;
+	width: 10px;
+	height:55px;
+	border-radius: 100px 0 100px 10px;
+ }
+ .bird .Lwing .Lwing2{
+	background: #fff;
+	width: 10px;
+	height:45px;
+	border-radius: 0 0 50px 10px;
+ }
+ .bird .Lwing .Lwing3{
+	background: #fff;
+	width: 10px;
+	height: 38px;
+	border-radius: 0 0 40px 10px;
+ }
+ .bird .Lwing .Lwing4{
+	background: #fff;
+	width: 10px;
+	height: 30px;
+	border-radius: 0 150px 150px 0;
  }
