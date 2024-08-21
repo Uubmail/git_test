@@ -23,15 +23,16 @@ body{
 .prairie{
 	display: inline-block;
 	background-image: url(../prairie.png);
+	background-repeat: repeat-x;
 	margin: 0;
 	position: absolute;
-	width: 99999px;
+	width: 200%;
 	height: 230px;
-	animation: prairie 900s linear infinite both;
+	animation: prairie 10s linear infinite;
 }
 @keyframes prairie{
-	0%{transform: translate(-2000px);}
-	100%{transform: translate(-99999px);}
+	0%{left: 100%;}
+	100%{left: -100%;}
  }
 .body{
 	background: #fff;
@@ -210,7 +211,13 @@ body{
  /* 공룡 전체  */
 .content{
 	z-index: 1;
-} 
+	cursor: pointer;
+	transition: transform 0.5s linear;
+}
+
+.content.jump{
+	transform: translateY(-150px);
+}
 
  /* 공룡 크기 */
 .dino{
@@ -384,20 +391,3 @@ clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
 .momton .dino-shape-right div:nth-child(3){
 	transform: rotateZ(-6deg);
 }
-.all .content.jump {
-	animation: jump 1s ease;
-  }
-  @keyframes jump {
-	0% {
-	  top: 203px;
-	}
-	50% {
-	  top: 110px;
-	}
-	75% {
-	  top: 110px;
-	}
-	100% {
-	  top: 203px;
-	}
-  }
