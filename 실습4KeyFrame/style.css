@@ -22,7 +22,7 @@ body{
 }
 .prairie{
 	display: inline-block;
-	background-image: url(../prairie.png);
+	background-image: url(prairie.png);
 	margin: 0;
 	position: absolute;
 	width: 99999px;

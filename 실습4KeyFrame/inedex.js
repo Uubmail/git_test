@@ -10,14 +10,27 @@
 //     } else if (stopflag) {
 //       return;
 //     }
-document.querySelector('.content').addEventListener('click', function() {
-  const content = this;
+// document.querySelector('.content').addEventListener('click', function() {
+//   const content = this;
 
-  // jump 클래스 추가
-  content.classList.add('jump');
-    // 연속으로 캐릭터가 뛰지 않도록 조절
-    setTimeout(function() {
-    content.classList.remove("jump");
-    content = false;
-    }, 500);
-  });
+//   content.classList.add('jump');
+//     setTimeout(function() {
+//     content.classList.remove("jump");
+//     }, 500);
+//     content.attr("jump",true);
+//   });
+
+  $('.content').click(function () {
+
+    if (isDisabled) {  //<-( 1 ) 수행가능여부 검사
+    content.classList.add('jump');
+      setTimeout(function() {
+      content.classList.remove("jump");
+      }, 500);
+      return false;
+    } else {
+      isDisabled = true; //<-( 2 ) 실행 불가능하도록 flag 변경
+      doSomthing();
+      
+    }
+});
